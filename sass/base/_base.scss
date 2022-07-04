@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: 62.5%;
+
+  @include mediaQuery(desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  @include flex-column;
+  @include flex-center;
+
+  min-height: 100vh;
+  background-color: $color-neutral-300;
+  color: $color-primary-100;
+
+  padding: 3rem 2rem;
+}
+
+::selection {
+  background-color: $color-primary-200;
+  color: $color-neutral-200;
+}

@@ -1,0 +1,61 @@
+.advice-card {
+  @include flex-column;
+  align-items: center;
+
+  gap: 2.5rem;
+  padding: 4rem 2rem;
+
+  max-width: 45rem;
+
+  text-align: center;
+
+  background-color: $color-neutral-200;
+
+  border-radius: 10px;
+
+  &__advice-id {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $color-primary-200;
+  }
+
+  &__advice-text {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+  }
+
+  &__divider {
+  }
+
+  &__dice {
+    @include flex-row;
+    background-color: $color-primary-200;
+
+    padding: 1.8rem;
+    margin-bottom: -7rem;
+    width: fit-content;
+
+    border: none;
+    border-radius: 50%;
+
+    transition: all 0.1s linear;
+
+    cursor: pointer;
+
+    & > img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    &:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: 0 0 2rem $color-primary-200;
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+}
