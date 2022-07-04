@@ -4,7 +4,9 @@ const adviceTextContainer = document.querySelector(".advice-card__advice-text");
 
 const getAdvice = async function () {
   try {
-    const response = await fetch("https://api.adviceslip.com/advice");
+    const response = await fetch("https://api.adviceslip.com/advice", {
+      cache: "no-store",
+    });
     const data = await response.json();
     return data;
   } catch (error) {
